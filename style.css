@@ -1,0 +1,324 @@
+/* variables */
+:root{
+    --WhiteColor: #ffffff;
+    --LightGreyColor: #E4E4E4;
+    --BlackColor: #000000;
+}
+/* reset*/
+
+/* Base style */
+
+/* ------------ fonts ----------*/
+@font-face{
+    font-family: 'Playfair Display Medium';
+    src: url('Assets/Fonts/PlayfairDisplay-Medium.ttf');
+}
+
+@font-face{
+    font-family: 'Playfair Display MediumItalic';
+    src: url('Assets/Fonts/PlayfairDisplay-MediumItalic.ttf');
+}
+
+@font-face{
+    font-family: 'Montserrat Regular';
+    src: url('Assets/Fonts/Montserrat-Regular.ttf');
+}
+
+@font-face{
+    font-family: 'Montserrat Bold';
+    src: url('Assets/Fonts/Montserrat-Bold.ttf');
+}
+
+
+/* --------- Mobile styles ---------- */
+@media screen and (min-width: 325px) {
+
+    body, p, a, ul, li{
+        font-size: 0.85rem;
+        font-family: 'Montserrat Regular';
+        padding: 0.25rem 0;
+        margin: 0;
+        color: var(--BlackColor);
+        text-decoration: none;
+    }
+
+    body{
+        padding: 0;
+    }
+
+    h1,h2,h3{
+        font-family: 'Playfair Display Medium';
+        padding: 0;
+        margin: 0;
+        color: var(--BlackColor);
+        text-transform: capitalize;
+    }
+
+    picture{
+        display: block;
+    }
+
+    h1{
+        padding: 1rem 0;
+        font-size: 1.35rem;
+    }
+
+    h2{
+        font-size: 1.75rem;
+    }
+
+    li{
+        list-style-type: none;
+    }
+
+    .shop-link{
+        color: var(--BlackColor);
+        font-family: 'Montserrat Bold';
+        text-transform: uppercase;
+        text-decoration: underline;
+        display: block;
+        font-size: 0.85rem;
+    }
+
+    section, blockquote{
+        padding: 0;
+        margin: 0;
+    }
+
+    section header{
+        text-align: center;
+        padding: 0.25rem 0;
+    }
+
+    /*---css for showcase section------=*/
+    .showcase-section{
+        padding-bottom: 2rem;
+        background-color: var(--LightGreyColor);
+    }
+
+    .showcase-section .showcase-article{
+        display: flex;
+        align-items: center;
+    }
+
+    .showcase-section .showcase-article-content {
+        width: 50%;
+    }
+
+
+    section.showcase-article-content .shop-link{
+        display: none;
+    }
+
+    article.showcase-article:nth-child(2n-1) .showcase-article-content{
+        margin-left: -1rem;
+    }
+
+    .showcase-article:nth-child(2n){
+        flex-direction: row-reverse;
+    }
+
+    .showcase-article:nth-child(2n) .showcase-article-content{
+        margin-right: -1rem;
+        text-align: right;
+    }
+
+    /*---css for banner section---*/
+    .banner-section{
+        position: relative;
+        text-align: center;
+    }
+
+    .banner-section img{ 
+        width: 100%;
+        display: block;
+    }
+
+    .banner-section article{
+        position: absolute;
+        top: 50%;
+        bottom: 50%;
+        transform: translate(0%, -50%);
+        left: 5%;
+        right: 5%;
+        height: fit-content;
+    }
+
+    .banner-section article h1, .banner-section article p{
+        color: var(--WhiteColor);
+    }
+
+    /*----css for upcoming clothes section---- */
+    .upcoming-clothes-section{
+        background-color: var(--LightGreyColor);
+        padding: 0 5%;
+    }
+
+    
+
+    .upcoming-clothes-section article{
+        background-color: var(--WhiteColor);
+        margin: 2rem 0;
+    }
+
+    .upcoming-clothes-section article img{
+        display: block;
+        width: 100%;
+    }
+
+    .upcoming-clothes-section article .article-detail{
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .upcoming-clothes-section .article-detail h2{
+        font-family: 'Playfair Display Medium';
+        font-size: 1.75rem;
+        line-height: 1.4;
+        padding-bottom: 0.5rem ;
+    }
+
+    .upcoming-clothes-section .article-detail strong{
+        text-transform: uppercase;
+        font-size: 1rem;
+    }
+
+    .upcoming-clothes-section aside{
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        padding-bottom: 2rem ;
+    }
+
+    .upcoming-clothes-section aside section{
+        padding: 0.5rem;
+    }
+    
+
+    .upcoming-clothes-section aside blockquote, .upcoming-clothes-section aside p{
+        font-family: 'Montserrat Bold';
+        font-weight: bold;
+        font-style: italic;
+        padding: 0.75rem 0;
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    .upcoming-clothes-section aside blockquote:before{
+        content: open-quote;;
+    }
+
+    .upcoming-clothes-section aside blockquote:after{
+        content: close-quote;;
+    }
+
+}
+
+
+
+
+/* --------- Tablet styles ------------- */
+@media screen and (min-width: 976px) {
+
+    h1{
+        font-size: 2rem;
+    }
+
+    h2{
+        font-size: 2.35rem;
+    }
+
+    p, a, ul, li{
+        font-size: 1.25rem;
+    }
+
+    .shop-link{
+        font-size: 1.25rem;
+    }
+
+    .showcase-section{
+        padding-bottom: 5rem;
+    }
+
+    section.showcase-article-content .shop-link{
+        display: block;
+    }
+
+    .showcase-section .showcase-article:not(:first-child){
+        margin-top: -5rem;
+    }
+
+    .banner-section article{
+        width: 50%;
+        margin: 0 auto;
+    }
+    
+    
+    .upcoming-clothes-section .upcoming-clothes-articles-section{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 5%;
+    }
+
+    .upcoming-clothes-section .upcoming-clothes-articles-section article{
+        display: inherit;
+    }
+
+    .upcoming-clothes-section aside{
+        width: 80%;
+        display: flex;
+        align-items: flex-end;
+        text-align: left;
+        padding: 2rem 0 4rem 0;
+    }
+
+    .upcoming-clothes-section aside section{
+        padding: 2rem;
+    }
+}
+
+/* ---------- Desktop styles -----------*/
+@media screen and (min-width: 1920px) {
+
+    h1{
+        font-size: 2.5rem;
+    }
+
+    h2{
+        font-size: 2.75rem;
+    }
+
+    p,a,ul,li{
+        font-size: 1.5rem;
+    }
+
+    .shop-link{
+        font-size: 1.5rem;
+    }
+
+    .showcase-section{
+        padding-bottom: 8rem;
+    }
+
+    .showcase-section .showcase-article:not(:first-child){
+        margin-top: -8rem;
+    }
+
+
+    /*----css for upcoming clothes section---- */
+    .upcoming-clothes-section{
+        background-color: var(--LightGreyColor);
+        padding: 0 10%;
+    }
+
+    .upcoming-clothes-section .upcoming-clothes-articles-section{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 10%;
+    }
+
+    .upcoming-clothes-section aside section{
+        padding: 4rem;
+    }
+
+}
